@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>YHTOUR</title>
+    
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mob.css">
+
+</head>
+<body>
+   
+<header>
+    <div class="wrap">   
+        <h1>
+            <a href="index.html">
+                <img src="images/header_logo.png" alt="YHT 연희투어 로고">
+                <p>연희투어</p>
+            </a>
+        </h1>
+        
+        <div id="search">
+            <input type="text" class="search_keyword" name title="검색어" placeholder="검색어를 입력하세요.">
+            <input type="image" src="images/main_search_icon.png" alt="검색하기">
+        </div>
+        <div class="top cl">
+            <div class="topnav cl hot">
+                <span>HOT</span>
+                <div id="hotframe">
+                    <ul class="hotslide">
+                        <li><a href="#">부산</a></li>
+                        <li><a href="#">제주도호텔</a></li>
+                        <li><a href="#">서울호캉스</a></li>
+                        <li><a href="#">강릉펜션</a></li>
+                        <li><a href="#">특가상품</a></li>
+                        <li><a href="#">동해펜션</a></li>
+                        <li><a href="#">땡처리특가</a></li>
+                        <li><a href="#">파티룸</a></li>
+                        <li><a href="#">평창휘닉스파크</a></li>
+                        <li><a href="#">대관령눈꽃축제</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul id="snb1" class="topnav">
+                <li><a href="#">기획전</a></li>
+                <li><a href="#">핫딜</a></li>
+                <li><a href="#">기업여행</a></li>
+            </ul>
+            <ul id="snb2" class="topnav">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">마이메뉴</a></li>
+                <li><a href="#">예약&middot;결제</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+
+        <ul id="gnb">
+            <li><a href="#none">국내여행</a>
+            <ul>
+                <li><a href="#">제주여행</a></li>
+                <li><a href="#">내륙여행</a></li>
+                <li><a href="#">섬여행</a></li>
+                <li><a href="#">교통안내</a></li>
+                <li><a href="#">단독여행문의</a></li>
+                <li><a href="#none" class="mob">&nbsp;</a></li>
+            </ul>
+            </li>
+            <li><a href="#none">해외여행</a>
+                <ul>
+                <li><a href="#">동남아&middot;대만&middot;서남아</a></li>
+                <li><a href="#">중국&middot;홍콩&middot;러시아</a></li>
+                <li><a href="#">일본</a></li>
+                <li><a href="#">유럽&middot;아프리카</a></li>
+                <li><a href="#">남태평양&middot;오세아니아</a></li>
+                <li><a href="#">미주&middot;중남미&middot;하와이</a></li>
+            </ul>
+            </li>
+            <li><a href="#none">테마여행</a>
+            <ul>
+                <li><a href="#">신혼여행</a></li>
+                <li><a href="#">효도여행</a></li>
+                <li><a href="#">반려견동반</a></li>
+                <li><a href="#">비즈니스</a></li>
+                <li><a href="#">교육여행</a></li>
+                <li><a href="#">체험여행</a></li>
+                <li><a href="#">힐링여행</a></li>
+                <li><a href="#">맛집여행</a></li>
+                <li><a href="#">당일치기</a></li>
+                <li><a href="#none" class="mob">&nbsp;</a></li>
+            </ul>
+            </li>
+            <li><a href="#none">항공권</a>
+            <ul>
+                <li><a href="#">항공권예약</a></li>
+                <li><a href="#">땡처리항공</a></li>
+                <li><a href="#">전세계할인항공</a></li>
+                <li><a href="#">단체항공</a></li>
+            </ul>
+            </li>
+            <li><a href="#none">숙박시설</a>
+            <ul>
+                <li><a href="#">호텔&middot;모텔</a></li>
+                <li><a href="#">펜션&middot;풀빌라</a></li>
+                <li><a href="#">리조트</a></li>
+                <li><a href="#">캠핑&middot;글램핑</a></li>
+                <li><a href="#">게스트하우스</a></li>
+                <li><a href="#">파티룸대실</a></li>
+            </ul>
+            </li>
+            <li><a href="#none">체험&middot;입장권</a>
+            <ul>
+                <li><a href="#">액티비티&middot;스포츠</a></li>
+                <li><a href="#">공연&middot;미술&middot;전시관</a></li>
+                <li><a href="#">테마파크</a></li>
+                <li><a href="#">애니멀&middot;아쿠아리움</a></li>
+            </ul>
+            </li>
+            <li><a href="#none">렌터카</a>
+            <ul>
+                <li><a href="#">수도권</a></li>
+                <li><a href="#">강원도</a></li>
+                <li><a href="#">충청도</a></li>
+                <li><a href="#">전라도</a></li>
+                <li><a href="#">경상도</a></li>
+                <li><a href="#">제주도</a></li>
+            </ul>
+            </li>
+            <li><a href="#none">연계서비스</a>
+            <ul>
+                <li><a href="#">여행정보</a></li>
+                <li><a href="#">모바일서비스</a></li>
+                <li><a href="#">VIP의전서비스</a></li>
+                <li><a href="#">포켓와이파이</a></li>
+                <li><a href="#">연희투어비자센터</a></li>
+                <li><a href="#">연희투어상품권</a></li>
+                <li><a href="#">쿠폰&middot;제휴&middot;혜택</a></li>
+                <li><a href="#">연희항공</a></li>
+                <li><a href="#">연희호텔</a></li>
+                <li><a href="#none" class="mob">&nbsp;</a></li>
+            </ul>
+            </li>
+        </ul>
+        
+        <ul id="hsns" class="mob">
+            <li><a href="#">
+                <img src="images/main_sns_facebook.png" alt="연희투어 페이스북 바로가기">    
+            </a></li>
+            <li><a href="#">
+                <img src="images/main_sns_instagram.png" alt="연희투어 인스타그램 바로가기">
+            </a></li>
+            <li><a href="#">
+                <img src="images/main_sns_kakao.png" alt="연희투어 카카오플러스 바로가기">
+            </a></li>
+            <li><a href="#">
+                <img src="images/main_sns_youtube.png" alt="연희투어 유투브 바로가기">
+            </a></li>
+            <li><a href="#">
+                <img src="images/main_sns_blog.png" alt="연희투어 블로그 바로가기">
+            </a></li>
+        </ul>
+        <div class="app">
+            <ul id="happ" class="mob">
+                <li>
+                    <a href="#"><img src="images/app_icon_tour.png" alt="연희투어 앱 바로가기"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/app_icon_yh.png" alt="연희그룹 앱 바로가기"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/app_icon_air.png" alt="연희항공 앱 바로가기"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/app_icon_hotel.png" alt="연희호텔 앱 바로가기"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/app_icon_fnt.png" alt="연희퍼니처 앱 바로가기"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div href="#none" id="mobmenu" class="mob">
+    <div class="mobnbt">
+        <div class="hamburger" id="hamburger-9">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+    </div>
+</div>
+<div class="blank"></div>
+
+
+
+<section id="mainv">
+    <div class="mainvframe pc">
+        <ul class="mainvslide pc">
+            <li style="background: url(images/main_visual1.png) no-repeat center/cover"></li>
+            <li style="background: url(images/main_visual2.png) no-repeat center/cover"></li>
+            <li style="background: url(images/main_visual3.png) no-repeat center/cover"></li>
+            <li style="background: url(images/main_visual4.png) no-repeat center/cover"></li>
+            <li style="background: url(images/main_visual5.png) no-repeat center/cover"></li>
+            <li style="background: url(images/main_visual6.png) no-repeat center/cover"></li>
+            <li style="background: url(images/main_visual7.png) no-repeat center/cover"></li>
+        </ul>
+    </div>
+    <div class="mainvframe mob">
+        <div class="swiper-container swiper1">
+        <div class="swiper-wrapper mob">
+            <div class="swiper-slide" style="background: url(images/main_visual_mob1.png) no-repeat center/cover"></div>
+            <div class="swiper-slide" style="background: url(images/main_visual_mob2.png) no-repeat center/cover"></div>
+            <div class="swiper-slide" style="background: url(images/main_visual_mob3.png) no-repeat center/cover"></div>
+            <div class="swiper-slide" style="background: url(images/main_visual_mob4.png) no-repeat center/cover"></div>
+            <div class="swiper-slide" style="background: url(images/main_visual_mob5.png) no-repeat center/cover"></div>
+            <div class="swiper-slide" style="background: url(images/main_visual_mob6.png) no-repeat center/cover"></div>
+            <div class="swiper-slide" style="background: url(images/main_visual_mob7.png) no-repeat center/cover"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">    
+    <h2>메인 비주얼 배너 영역</h2>
+        <div class="mvpage cl">
+            <p><span class="num">1</span> / <span class="all">7</span></p>
+            <div class="mvpageswap pc">
+                <a href="#none" class="mvprev">
+                    <img src="images/visual_prev_icon.png" alt="이전으로">
+                </a>
+                <a href="#none" class="mvstop">
+                    <img src="images/visual_stop_icon.png" alt="자동 넘김 정지">
+                </a>
+                <a href="#none" class="mvnext">
+                    <img src="images/visual_next_icon.png" alt="다음으로">
+                </a>
+            </div>
+        </div>
+
+        <article class="quick">
+           <h3>어떤 여행을 떠나고 싶으세요?</h3>
+           <ul class="qchoice">
+               <li class="on1" data-qtab="qtour">여행</li>
+               <li data-qtab="qair">항공</li>
+               <li data-qtab="qtel">숙박</li>
+           </ul>
+
+            <ul class="qsub qtour on2"> 
+                <li class="on3" data-qstab="qtourdom">국내여행</li>
+                <li data-qstab="qtourfrn">해외여행</li>
+            </ul>
+
+            <ul class="qsub qair"> 
+                <li class="on3" data-qstab="qairrnd">왕복</li>
+                <li data-qstab="qairone">편도</li>
+                <li data-qstab="qairmt">다구간</li>
+            </ul>
+            <ul class="qsub qtel"> 
+                <li data-qstab="qtelstay">숙박</li>
+                <li data-qstab="qtelrent">대실</li>
+            </ul> 
+
+            <ul class="qcont qtoursub qtourdom on4"> 
+               <li><input class="qtplace" name="tour_palce" required placeholder="여행지를 입력하세요 (필수사항)"></li>
+               <li>
+                   <select class="qsplace">
+                       <option selected>출발지를 선택하세요.</option>
+                       <option>서울</option>
+                       <option>경기도</option>
+                       <option>인천</option>
+                       <option>강원도</option>
+                       <option>충청도</option>
+                       <option>경상도</option>
+                       <option>전라도</option>
+                       <option>제주도</option>
+                   </select>
+               </li>
+               <li class="qadd date">
+                  <p>출발일 선택</p>
+               </li>
+
+               <li class="qadd price">
+                   <p>가격 선택</p>
+               </li>
+           </ul>
+            <ul class="qcont qtoursub qtourfrn"> 
+               <li>
+                   <select class="qtplace">
+                       <option selected>여행지를 선택하세요.</option>
+                       <option>동남아·대만·서남아</option>
+                       <option>중국·홍콩·러시아</option>
+                       <option>일본</option>
+                       <option>유럽·아프리카</option>
+                       <option>남태평양·호주·뉴질랜드</option>
+                       <option>미주·중남미·하와이</option>
+                   </select>
+               </li>
+               <li>
+                   <select class="qsplace">
+                       <option selected>출발 공항을 선택하세요.</option>
+                       <option>인천 국제공항</option>
+                       <option>김포 국제공항</option>
+                       <option>제주 국제공항</option>
+                       <option>김해 국제공항</option>
+                       <option>청주 국제공항</option>
+                       <option>대구 국제공항</option>
+                       <option>양양 국제공항</option>
+                       <option>무안 국제공항</option>
+                   </select>
+               </li>
+
+
+               <li class="qadd date">
+                    <p>출발일 선택</p>
+               </li>
+
+               <li class="qadd price">
+                    <p>가격 선택</p>
+               </li>
+           </ul>
+                <!--calander-->
+            <div class="calender">
+               <ul class="cldmonth">
+                   <li class="on">2021년 8월</li>
+                   <li>2021년 9월</li>
+                   <li>2021년 10월</li>
+                   <li>2021년 11월</li>
+               </ul>
+               <a href="#none" class="prev">&lt;</a>
+               <a href="#none" class="next">&gt;</a>
+
+               <ul class="cldday">
+                   <li>일</li>
+                   <li>월</li>
+                   <li>화</li>
+                   <li>수</li>
+                   <li>목</li>
+                   <li>금</li>
+                   <li>토</li>
+               </ul>
+               <ul class="clddate m8">
+                   <li class="light">25</li>
+                   <li class="light">26</li>
+                   <li class="light">27</li>
+                   <li class="light">28</li>
+                   <li class="light">29</li>
+                   <li class="light">30</li>
+                   <li class="light">31</li>
+                   <li>1</li>
+                   <li>2</li>
+                   <li>3</li>
+                   <li>4</li>
+                   <li>5</li>
+                   <li>6</li>
+                   <li>7</li>
+                   <li>8</li>
+                   <li>9</li>
+                   <li>10</li>
+                   <li>11</li>
+                   <li>12</li>
+                   <li>13</li>
+                   <li>14</li>
+                   <li>15</li>
+                   <li>16</li>
+                   <li>17</li>
+                   <li>18</li>
+                   <li>19</li>
+                   <li>20</li>
+                   <li>21</li>
+                   <li>22</li>
+                   <li>23</li>
+                   <li>24</li>
+                   <li>25</li>
+                   <li>26</li>
+                   <li>27</li>
+                   <li>28</li>
+                   <li>29</li>
+                   <li>30</li>
+                   <li>31</li>
+                   <li class="light">1</li>
+                   <li class="light">2</li>
+                   <li class="light">3</li>
+                   <li class="light">4</li>
+               </ul>
+               <ul class="clddate m9">
+                   <li class="light">29</li>
+                   <li class="light">30</li>
+                   <li class="light">31</li>
+                   <li>1</li>
+                   <li>2</li>
+                   <li>3</li>
+                   <li>4</li>
+                   <li>5</li>
+                   <li>6</li>
+                   <li>7</li>
+                   <li>8</li>
+                   <li>9</li>
+                   <li>10</li>
+                   <li>11</li>
+                   <li>12</li>
+                   <li>13</li>
+                   <li>14</li>
+                   <li>15</li>
+                   <li>16</li>
+                   <li>17</li>
+                   <li>18</li>
+                   <li>19</li>
+                   <li>20</li>
+                   <li>21</li>
+                   <li>22</li>
+                   <li>23</li>
+                   <li>24</li>
+                   <li>25</li>
+                   <li>26</li>
+                   <li>27</li>
+                   <li>28</li>
+                   <li>29</li>
+                   <li>30</li>
+                   <li class="light">1</li>
+                   <li class="light">2</li>
+                   <li class="light">3</li>
+                   <li class="light">4</li>
+                   <li class="light">5</li>
+                   <li class="light">6</li>
+                   <li class="light">7</li>
+                   <li class="light">8</li>
+                   <li class="light">9</li>
+               </ul>
+               <ul class="clddate m10">
+                   <li class="light">26</li>
+                   <li class="light">27</li>
+                   <li class="light">28</li>
+                   <li class="light">29</li>
+                   <li class="light">30</li>
+                   <li>1</li>
+                   <li>2</li>
+                   <li>3</li>
+                   <li>4</li>
+                   <li>5</li>
+                   <li>6</li>
+                   <li>7</li>
+                   <li>8</li>
+                   <li>9</li>
+                   <li>10</li>
+                   <li>11</li>
+                   <li>12</li>
+                   <li>13</li>
+                   <li>14</li>
+                   <li>15</li>
+                   <li>16</li>
+                   <li>17</li>
+                   <li>18</li>
+                   <li>19</li>
+                   <li>20</li>
+                   <li>21</li>
+                   <li>22</li>
+                   <li>23</li>
+                   <li>24</li>
+                   <li>25</li>
+                   <li>26</li>
+                   <li>27</li>
+                   <li>28</li>
+                   <li>29</li>
+                   <li>30</li>
+                   <li>31</li>
+                   <li class="light">1</li>
+                   <li class="light">2</li>
+                   <li class="light">3</li>
+                   <li class="light">4</li>
+                   <li class="light">5</li>
+                   <li class="light">6</li>
+               </ul>
+
+               <div class="cldresult">
+                   <p>여행 시작일
+                   <span>여행시작일을</span> <span>선택하세요</span></p>
+                   <input type="submit" value="선택완료">
+               </div>
+               <div class="cldclose">
+                   <img src="images/main_cldclose.png">
+               </div>
+            </div>
+                <!--paybar-->
+            <div class="paybar">
+                <p>
+                <input type="text" class="amount2">
+                </p>
+                <div class="slider-range"></div>
+                
+                <div class="payresult2">
+                   <input type="submit" value="선택완료">
+                </div>
+
+                <div class="pbclose">
+                    <img src="images/main_cldclose.png">
+                </div>
+            </div>
+            
+            <div class="qcont qairsub qairrnd">
+            <ul>
+                <li class="aplace">출발지</li>
+                <li class="bplace">도착지</li>
+                <li class="checkindate">왕복 탑승일</li>
+                <li class="pnum">인원수 &middot; 좌석등급</li>
+                <li class="direct">직항</li>
+                <img src="images/qair_arrow1.png" alt="왕복 아이콘">
+            </ul>
+            <img src="images/qair_arrow1.png" alt="왕복 아이콘">
+            </div>
+            <div class="qcont qairsub qairone">
+            <ul>
+                <li class="aplace">출발지</li>
+                <li class="bplace">도착지</li>
+                <li class="checkindate">편도 탑승일</li>
+                <li class="pnum">인원수 &middot; 좌석등급</li>
+                <li class="direct">직항</li>
+            <img src="images/qair_arrow2.png" alt="왕복 아이콘">    
+            </ul>     
+            </div>
+            <div class="qcont qairsub qairmt">
+            <ul>
+                <li class="aplace">출발지</li>
+                <li class="bplace">도착지</li>
+                <li class="aplace">출발지</li>
+                <li class="bplace">도착지</li>
+                <li class="pnum">인원수 &middot; 좌석등급</li>
+                <li class="direct padd">+추가</li>   
+            </ul>
+            </div>
+            
+            <ul class="qcont qtelsub qtelstay">
+                <li><input type="text" placeholder="여행지를 입력하세요 (필수사항)"></li>
+                <li class="check">체크인 ~ 체크아웃</li>
+                <li class="telnum">객실수 &middot; 인원수</li>
+            </ul>
+            <ul class="qcont qtelsub qtelrent">
+                <li><input type="text" placeholder="여행지를 입력하세요 (필수사항)"></li>
+                <li class="check">체크인 ~ 체크아웃</li>
+                <li class="telnum">룸타입 &middot; 인원수</li>
+            </ul>
+            
+           <input type="submit" value="SEARCH">
+       </article>
+    </div>
+</section>
+
+<section id="mcont1">
+   <div class="wrap">
+        <h3>연희투어 추천 상품</h3>
+        <div class="mcont1_frame swiper-container swiper2">
+        <ul id="mrecom" class="swiper-wrapper">
+            <!-------1-------->
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_recom1.png" alt="서귀포 칼호텔 이미지">
+                    </figure>
+                    <span>자유여행</span>
+                    <h4>서귀포 KAL호텔 자유여행 3일</h4>
+                    <p>246,000 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#에어카텔</a>
+                    <a href="#">#제주도</a>
+                    <a href="#">#서귀포</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                   <figure>
+                        <img src="images/main_recom2.png" alt="스카이베이 경포 호텔 이미지">
+                    </figure>    
+                    <span>호텔</span>
+                    <h4>스카이베이 경포 호텔</h4>
+                    <p>94,430 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#경포호텔</a>
+                    <a href="#">#강원도</a>
+                    <a href="#">#경포대</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_recom3.png" alt="울릉도 이미지">
+                    </figure>    
+                    <span>패키지</span>
+                    <h4>울릉도 BEST 3일</h4>
+                    <p>319,000 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#울릉도</a>
+                    <a href="#">#이색여행</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_recom4.png" alt="서울 야경 이미지">
+                    </figure>
+                    <span>호텔</span>
+                    <h4>서울 호캉스 특가 기획전</h4>
+                    <p>119,000 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#호캉스</a>
+                    <a href="#">#서울호텔</a>
+                </div>
+            </li>
+            
+            <!-------2-------->
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_recom1.png" alt="서귀포 칼호텔 이미지">
+                    </figure>
+                    <span>자유여행</span>
+                    <h4>서귀포 KAL호텔 자유여행 3일</h4>
+                    <p>246,000 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#에어카텔</a>
+                    <a href="#">#제주도</a>
+                    <a href="#">#서귀포</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                   <figure>
+                        <img src="images/main_recom2.png" alt="스카이베이 경포 호텔 이미지">
+                    </figure>    
+                    <span>호텔</span>
+                    <h4>스카이베이 경포 호텔</h4>
+                    <p>94,430 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#경포호텔</a>
+                    <a href="#">#강원도</a>
+                    <a href="#">#경포대</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_recom3.png" alt="울릉도 이미지">
+                    </figure>    
+                    <span>패키지</span>
+                    <h4>울릉도 BEST 3일</h4>
+                    <p>319,000 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#울릉도</a>
+                    <a href="#">#이색여행</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_recom4.png" alt="서울 야경 이미지">
+                    </figure>
+                    <span>호텔</span>
+                    <h4>서울 호캉스 특가 기획전</h4>
+                    <p>119,000 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#호캉스</a>
+                    <a href="#">#서울호텔</a>
+                </div>
+            </li>
+            
+            <!-------3-------->
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_recom1.png" alt="서귀포 칼호텔 이미지">
+                    </figure>
+                    <span>자유여행</span>
+                    <h4>서귀포 KAL호텔 자유여행 3일</h4>
+                    <p>246,000 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#에어카텔</a>
+                    <a href="#">#제주도</a>
+                    <a href="#">#서귀포</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                   <figure>
+                        <img src="images/main_recom2.png" alt="스카이베이 경포 호텔 이미지">
+                    </figure>    
+                    <span>호텔</span>
+                    <h4>스카이베이 경포 호텔</h4>
+                    <p>94,430 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#경포호텔</a>
+                    <a href="#">#강원도</a>
+                    <a href="#">#경포대</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_recom3.png" alt="울릉도 이미지">
+                    </figure>    
+                    <span>패키지</span>
+                    <h4>울릉도 BEST 3일</h4>
+                    <p>319,000 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#울릉도</a>
+                    <a href="#">#이색여행</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_recom4.png" alt="서울 야경 이미지">
+                    </figure>
+                    <span>호텔</span>
+                    <h4>서울 호캉스 특가 기획전</h4>
+                    <p>119,000 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#호캉스</a>
+                    <a href="#">#서울호텔</a>
+                </div>
+            </li>
+        </ul>
+        <div class="mcont1_btn mrecom_btn pc">
+            <a href="#none" class="prev"><img src="images/index_prev.png" alt="이전으로"  data-aos="fade-left"></a>
+            <a href="#none" class="next"><img src="images/index_next.png" alt="다음으로" data-aos="fade-right"></a>
+        </div>
+        </div>
+        
+        <h3>주간 BEST 상품</h3>
+        <div class="mcont1_frame swiper-container swiper3">
+        <ul id="mbest" class="swiper-wrapper">
+            <!------------1----------->
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_best1.png" alt="겨울 제주도 이미지">
+                    </figure>
+                    <span>자유여행</span>
+                    <h4>제주도 윈터페스티발 자유여행 특가</h4>
+                    <p>246,000 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#에어카텔</a>
+                    <a href="#">#제주도</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_best2.png" alt="여수 오션뷰 호텔 이미지">
+                    </figure>
+                    <span>호텔</span>
+                    <h4>여수 오션뷰 호텔 특가 기획전</h4>
+                    <p>94,430 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#경포호텔</a>
+                    <a href="#">#강원도</a>
+                    <a href="#">#경포대</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_best3.png" alt="제주도 카멜리아힐 이미지">
+                    </figure>
+                    <span>입장권</span>
+                    <h4>제주도 카멜리아힐 얼리버드 특가</h4>
+                    <p>3,500 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#제주도</a>
+                    <a href="#">#카멜리아힐</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_best4.png" alt="아프리카 이미지">
+                    </figure>
+                    <span>패키지</span>
+                    <h4>아프리카 투어 땡처리 특가</h4>
+                    <p>769,900 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#아프리카</a>
+                    <a href="#">#땡처리</a>
+                </div>
+            </li>  
+            
+            <!------------2----------->
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_best1.png" alt="겨울 제주도 이미지">
+                    </figure>
+                    <span>자유여행</span>
+                    <h4>제주도 윈터페스티발 자유여행 특가</h4>
+                    <p>246,000 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#에어카텔</a>
+                    <a href="#">#제주도</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_best2.png" alt="여수 오션뷰 호텔 이미지">
+                    </figure>
+                    <span>호텔</span>
+                    <h4>여수 오션뷰 호텔 특가 기획전</h4>
+                    <p>94,430 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#경포호텔</a>
+                    <a href="#">#강원도</a>
+                    <a href="#">#경포대</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_best3.png" alt="제주도 카멜리아힐 이미지">
+                    </figure>
+                    <span>입장권</span>
+                    <h4>제주도 카멜리아힐 얼리버드 특가</h4>
+                    <p>3,500 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#제주도</a>
+                    <a href="#">#카멜리아힐</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_best4.png" alt="아프리카 이미지">
+                    </figure>
+                    <span>패키지</span>
+                    <h4>아프리카 투어 땡처리 특가</h4>
+                    <p>769,900 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#아프리카</a>
+                    <a href="#">#땡처리</a>
+                </div>
+            </li>
+            
+               <!------------3----------->
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_best1.png" alt="겨울 제주도 이미지">
+                    </figure>
+                    <span>자유여행</span>
+                    <h4>제주도 윈터페스티발 자유여행 특가</h4>
+                    <p>246,000 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#에어카텔</a>
+                    <a href="#">#제주도</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_best2.png" alt="여수 오션뷰 호텔 이미지">
+                    </figure>
+                    <span>호텔</span>
+                    <h4>여수 오션뷰 호텔 특가 기획전</h4>
+                    <p>94,430 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#경포호텔</a>
+                    <a href="#">#강원도</a>
+                    <a href="#">#경포대</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_best3.png" alt="제주도 카멜리아힐 이미지">
+                    </figure>
+                    <span>입장권</span>
+                    <h4>제주도 카멜리아힐 얼리버드 특가</h4>
+                    <p>3,500 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#제주도</a>
+                    <a href="#">#카멜리아힐</a>
+                </div>
+            </li>
+            <li class="swiper-slide">
+               <a href="#">
+                    <figure>
+                        <img src="images/main_best4.png" alt="아프리카 이미지">
+                    </figure>
+                    <span>패키지</span>
+                    <h4>아프리카 투어 땡처리 특가</h4>
+                    <p>769,900 원~</p>
+                </a>
+                <div class="mrkeyword">
+                    <a href="#">#아프리카</a>
+                    <a href="#">#땡처리</a>
+                </div>
+            </li>  
+        </ul>
+        <div class="mcont1_btn mbest_btn pc">
+            <a href="#none" class="prev"><img src="images/index_prev.png" alt="이전으로"  data-aos="fade-left"></a>
+            <a href="#none" class="next"><img src="images/index_next.png" alt="다음으로" data-aos="fade-right"></a>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="mcont2">
+    <h2>연희항공 여행 영역</h2>
+    <div class="wrap">
+        <article class="mcont2bg pc">
+            <h3>연희항공과 함께하는<br>편안한 여행</h3>
+            <p>#한정판매</p>
+            <br><p>#연희투어단독</p>
+            <br><p>#인천공항호텔</p>
+        </article>
+
+
+        <article class="yhairpack cl">
+            <figure class="yhairmob mob">
+                <img src="images/mob_main_yhair.png" alt="연희항공 비행기 이미지">
+                <figcaption>
+                    <h3>연희항공과 함께하는<br>편안한 여행</h3>
+                    <p>#한정판매</p>
+                    <br><p>#연희투어단독</p>
+                    <br><p>#인천공항호텔</p>
+                </figcaption>
+            </figure>
+            <a href="#">
+                <img src="images/main_yhair2.png" alt="파라다이스시티 이미지">
+                <strong>D-day</strong>
+                <div>
+                    <span>연희항공패키지</span>
+                    <h4>&#91;10월14일&#93; 파라다이스시티
+                    <br>항공권+숙박+조식</h4>
+                    <p>374,000 원~</p>
+                </div>
+            </a>
+            <a href="#">
+                <img src="images/main_yhair3.png" alt="네스트호텔 이미지">
+                <strong>D-1</strong>
+                <div>
+                    <span>연희항공패키지</span>
+                    <h4>&#91;10월15일&#93; 네스트호텔
+                    <br>항공권+숙박</h4>
+                    <p>340,000 원~</p>
+                </div>
+            </a>
+            <a href="#">
+                <img src="images/main_yhair4.png" alt="파라다이스시티 이미지">
+                <strong>D-6</strong>
+                <div>
+                    <span>연희항공패키지</span>
+                    <h4>&#91;10월20일&#93; 호텔오라
+                    <br>항공권+숙박</h4>
+                    <p>217,000 원~</p>
+                </div>
+            </a>
+        </article>    
+    </div>
+</section>
+
+<section id="mcont3">
+    <h2>테마여행 영역</h2>
+    <div class="wrap">
+        <article id="mthemenav"> <!--182-->
+            <h3>테마여행</h3>
+            <ul>
+                <li><span></span><a href="#" class="select">신혼여행</a></li>
+                <li><span></span><a href="#">효도여행</a></li>
+                <li><span></span><a href="#">반려견동반</a></li>
+                <li><span></span><a href="#">비즈니스</a></li>
+                <li><span></span><a href="#">교육여행</a></li>
+                <li><span></span><a href="#">체험여행</a></li>
+                <li><span></span><a href="#">힐링여행</a></li>
+                <li><span></span><a href="#">맛집여행</a></li>
+                <li><span></span><a href="#">당일치기</a></li>
+                <li class="mob"><span></span><a href="#">MORE</a></li>
+            </ul>
+        </article>
+        <article id="mtheme" class="cl"> <!--998-->
+            <figure>
+                <a href="#">
+                    <span>인도네시아</span>
+                    <h4>발리
+                    <br>Balli
+                    <br>Honeymoon
+                    <br>4박 6일</h4>
+                    <p>1,723,000 원~</p>
+
+                    <ul class="pc">
+                        <li>#전일정풀빌라</li>
+                        <li>#프라이빗</li>
+                        <li>#가성비</li>
+                    </ul>
+                    <img src="images/more_icon.png" alt="더보기">
+                </a>
+            </figure>
+
+            <figure>
+                <a href="#">
+                    <span>미주</span>
+                    <h4>하와이
+                    <br>Hawaii
+                    <br>Honeymoon
+                    <br>6박 7일</h4>
+                    <p>2,939,900 원~</p>
+
+                    <ul class="pc">
+                        <li>#오아후섬</li>
+                        <li>#카네오에해양스포츠</li>
+                        <li>#빅아일랜드일일투어</li>
+                    </ul>
+                    <img src="images/more_icon.png" alt="더보기">
+                </a>
+            </figure>
+
+            <figure>
+                <a href="#">
+                    <span>반얀트리</span>
+                    <h4>세이셸
+                    <br>Seychelles
+                    <br>Honeymoon
+                    <br>6박 7일</h4>
+                    <p>4,561,600 원~</p>
+
+                    <ul class="pc">
+                        <li>#영국BBC선정지</li>
+                        <li>#최후의지상낙원</li>
+                        <li>#프리미엄코스</li>
+                    </ul>
+                    <img src="images/more_icon.png" alt="더보기">
+                </a>
+            </figure>
+
+            <figure>
+                <a href="#">
+                    <span>마라디바</span>
+                    <h4>모리셔스
+                    <br>Mauritius
+                    <br>Honeymoon
+                    <br>7박 8일</h4>
+                    <p>3,150,000 원~</p>
+
+                    <ul class="pc">
+                        <li>#모리셔스섬</li>
+                        <li>#프라이빗</li>
+                        <li>#이색관광지</li>
+                    </ul>
+                    <img src="images/more_icon.png" alt="더보기">
+                </a>
+            </figure>
+        </article>
+    </div>
+</section>
+
+<section id="mcont4">
+    <h2>이달의 추천 여행 영역</h2>
+    <div class="wrap">
+        <article class="mmonth">
+            <div class="tdmonth">
+                <h3>10</h3>
+                <p>October</p>
+            </div>
+            <div class="monthplace">
+                <h3>고성</h3>
+                <p>Goseong</p>
+            </div>
+
+            <div class="mob">
+               <!--모바일용 넣기-->
+                <a href="#" id="mobweather">weather</a>
+            </div>
+
+            <div class="tdweather pc">
+                <dl>
+                    <dt>weather</dt>
+                    <dd>
+                        <img src="images/main_month_place.png" alt="위치아이콘">
+                        <span>강원도 고성군</span>
+                    </dd>
+                </dl>
+                <h4>today : 2020 . 10 . 01</h4>
+                <ul>
+                    <li>
+                        <strong>오전</strong>
+                        <img src="images/main_month_sun.png" alt="맑음 아이콘">
+                        <span>10º</span>
+                        <span>&nbsp;0%</span>
+                    </li>
+                    <li>
+                        <strong>오후</strong>
+                        <img src="images/main_month_cloud.png" alt="약간흐림 아이콘">
+                        <span>17º</span>
+                        <span>20%</span>
+                    </li>
+                </ul>
+                <p>미세먼지 33㎍/㎥ 보통
+                <br>초미세먼지 10㎍/㎥ 좋음
+                <br>오존지수 0.034ppm 보통</p>
+            </div>
+        </article>
+
+        <a href="#" class="mmonth">
+            <div class="monthbar">
+                <dl>
+                    <dt>하늬라벤더팜</dt>
+                    <dd>#라벤더꽃밭</dd>
+                    <dd>#포토존</dd>
+                    <dd>#인생샷</dd>
+                    <dd>#셀프웨딩</dd>
+                </dl>
+                <img src="images/more_icon.png" alt="더보기">
+            </div>
+        </a>
+        <a href="#" class="mmonth">
+            <div class="monthbar">
+                <dl>
+                    <dt>설악산</dt>
+                    <dd>#가을산</dd>
+                    <dd>#단풍</dd>
+                    <dd>#효도여행</dd>
+                    <dd>#등산여행</dd>
+                </dl>
+                <img src="images/more_icon.png" alt="더보기">
+            </div>
+        </a>
+        <a href="#" class="mmonth">
+            <div class="monthbar">
+                <dl>
+                    <dt>GS풀빌라펜션</dt>
+                    <dd>#온수풀</dd>
+                    <dd>#스파</dd>
+                    <dd>#오션뷰</dd>
+                    <dd>#2020신축펜션</dd>
+                </dl>
+                <img src="images/more_icon.png" alt="더보기">
+            </div>
+        </a>
+        <a href="#" class="mmonth">
+            <div class="monthbar">
+                <dl>
+                    <dt>고성게장천국</dt>
+                    <dd>#가을제철음식</dd>
+                    <dd>#게장맛집</dd>
+                    <dd>#밥도둑</dd>
+                    <dd>#생생정보통방영</dd>
+                </dl>
+                <img src="images/more_icon.png" alt="더보기">
+            </div>
+        </a>
+        <a href="#" class="mmonth">
+            <div class="monthbar">
+                <dl>
+                    <dt>스퀘어루프탑</dt>
+                    <dd>#인스타감성</dd>
+                    <dd>#SNS핫플레이스</dd>
+                    <dd>#오션뷰</dd>
+                    <dd>#루프탑카페</dd>
+                </dl>
+                <img src="images/more_icon.png" alt="더보기">
+            </div>
+        </a>
+
+
+
+    </div>
+</section>
+
+<section id="mcont5">
+    <div class="wrap">
+        <div class="mvideobg pc"></div>
+        <dl>
+            <dt>YH Tour Supporters</dt>
+            <dd><a href="#">Tour Video</a></dd>
+            <dd><a href="#">모집신청</a></dd>
+        </dl>
+        <iframe width="1016" height="572" src="https://www.youtube.com/embed/YxgqdQ4Kpfo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>    
+</section>
+
+<section id="mcont6">
+    <h2>고객센터 상담, 이용안내, 공지사항 영역</h2>
+    <div class="wrap">
+        <article class="center cl">
+            <a href="tel:12345678">
+                <img src="images/main_headset_icon.png" alt="연희투어 고객센터 상담">
+                <h3>연희투어
+                <br>고객센터 상담</h3>
+                <p>1234-5678</p>
+            </a>
+
+            <div class="mob cl">
+                <a href="#">ARS 상담번호안내</a>
+                <a href="#">상담시간안내</a>
+                <a href="tel:12345679">법인고객전용상담</a>
+                <a href="tel:12345670">안심카드결제ARS</a>
+            </div>
+
+            <ul class="pc">
+                <li class="centerars">
+                    <h4>ARS 상담번호안내</h4>
+                    <p>1번 &#41; 예약상담
+                    <br>2번 &#41; ARS 예약 확인 및 결제 확인
+                    <br>3번 &#41; 국내공연 예매, 마일리지 및 제휴카드, 기타문의</p>
+
+                    <strong>법인고객 전용상담
+                    <a href="tel:12345679">1234-5679</a></strong>
+                    <strong>안심카드결제 ARS
+                    <a href="tel:12345670">1234-5670</a></strong>
+                    <a href="#" target="_blank">자세히&nbsp;&nbsp;+</a>
+                </li>
+                <li class="centertime">
+                    <h4>상담시간안내</h4>
+                    <strong>해외여행 상담</strong>
+                    <p>평일 10:00 ~ 14:30</p>
+                    <strong>국내여행, 항공권 / 호텔, 제휴 상담</strong>
+                    <p>평일 09:00 ~ 18:00</p>
+                    <strong>교육여행, 기업단체 상담</strong>
+                    <p><a href="#">http://yhtour.dothome.co.kr</a></p>
+                </li>
+            </ul>
+        </article>
+
+
+        <article class="userguide">
+            <ul>
+                <li><a href="#">
+                    <figure><img src="images/main_icon1.png" alt="세계날씨 아이콘"></figure>
+                    <h4>세계날씨</h4>
+                </a></li>
+                <li><a href="#">
+                    <figure><img src="images/main_icon2.png" alt="세계날씨 아이콘"></figure>
+                    <h4>세계시차</h4>
+                </a></li>
+                <li><a href="#">
+                    <figure><img src="images/main_icon3.png" alt="세계날씨 아이콘"></figure>
+                    <h4>환율</h4>
+                </a></li>
+                <li><a href="#">
+                    <figure><img src="images/main_icon4.png" alt="세계날씨 아이콘"></figure>
+                    <h4>할인쿠폰</h4>
+                </a></li>
+                <li><a href="#">
+                    <figure><img src="images/main_icon5.png" alt="세계날씨 아이콘"></figure>
+                    <h4>여행자보험</h4>
+                </a></li>
+                <li><a href="#">
+                    <figure><img src="images/main_icon6.png" alt="세계날씨 아이콘"></figure>
+                    <h4>비자신청</h4>
+                </a></li>
+            </ul>
+        </article>
+
+
+        <article class="note cl">
+            <h3>공지사항</h3>
+            <div class="notice">
+                <ul class="nslide">
+                    <li><a href="#">투어/입장권 시스템 점검에 따른 이용제한 안내</a></li>
+                    <li><a href="#">스카이라인 여행 고객 성원 감사 이벤트 당첨자 발표</a></li>
+                    <li><a href="#">TMS 서버 증설 작업으로 인한 서비스 이용 제한 안내</a></li>
+                    <li><a href="#">괌 추억소환 이벤트 당첨자 발표</a></li>
+                    <li><a href="#">하나투어 고객센터 전화상담 운영시간 변경 안내</a></li>
+                </ul>
+            </div>
+            <a href="#">더보기&nbsp;&nbsp;&nbsp;+</a>
+
+            <ul class="sns">
+                <li><a href="#">
+                        <img src="images/main_sns_facebook.png" alt="페이스북 바로가기">
+                </a></li>
+                <li><a href="#">
+                        <img src="images/main_sns_instagram.png" alt="인스타그램 바로가기">
+                </a></li>
+                <li><a href="#">
+                        <img src="images/main_sns_kakao.png" alt="카카오플러스 바로가기">
+                </a></li>
+                <li><a href="#">
+                        <img src="images/main_sns_youtube.png" alt="유투브 바로가기">
+                </a></li>
+                <li><a href="#">
+                        <img src="images/main_sns_blog.png" alt="블로그 바로가기">
+                </a></li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+<footer>
+    <div class="wrap">
+        <ul class="info">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">여행약관</a></li>
+            <li><a href="#">해외여행자보험</a></li>
+            <li><a href="#">마케팅제휴</a></li>
+            <li><a href="#">공식인증예약센터</a></li>
+        </ul>
+        <div class="fselect">
+            <select>
+                <option selected>Language</option>
+                <option>한국어</option>
+                <option>English</option>
+                <option>中国话</option>
+                <option>にほんご</option>
+                <option>français</option>
+            </select>
+            <select>
+                <option selected>Family Site</option>
+                <option>YH company</option>
+                <option>YHtour natwork</option>
+                <option>YH air</option>
+                <option>YH hotel</option>
+            </select>
+
+            <a href="index.html" class="mob"><img src="images/footer_logo1.png" alt="연희투어 로고"></a>
+        </div>
+    </div>
+    <div class="footerline"></div>
+    <div class="wrap">
+        <div class="fmark pc">
+            <a href="index.html">
+                <img src="images/footer_logo1.png" alt="연희투어 로고">
+            </a>
+            <a href="#">
+                <img src="images/footer_logo2.png" alt="국외여행상품 정보제공 표준안 참여 여행사 인증마크">
+            </a>
+        </div>
+        <div class="add">
+            <address class="cl pc">
+                <p>&#40;주&#41;연희투어</p>
+                <p>대표 : 이채빈</p>
+                <p>주소 : &#40;012345&#41; 인천광역시 서구 솔빛로 13 연희빌딩</p>
+                <p>사업자 등록번호 : 123-45-67891</p>
+                <p>통신판매업신고 : 서구 01-2345호</p>
+                <p>관광사업자 등록번호 : 제 1997-123456호</p>
+                <p>개인정보보호 책임자 : 이채빈 &#40;주&#41;연희투어네트워크</p>
+                <p>영업여행업보증 : 20억 1천만원</p>
+                <p>영업여행업보증 : 7억원</p>
+            </address>
+            <a href="tel:12345678">TEL : 1234-5678</a>
+            <a href="tel:1234-5678">FAX : 032-123-4567</a>
+            <a href="mailto:coqls2134@naver.com">E-mail : coqls2134@naver.com</a>
+            <p>※ 부득이한 사정에 의해 여행일정이 변경되는 경우 사전 동의를 받습니다.</p>
+            <p>※ 연희투어는 개별 항공권 단독 판매, 단품 및 일부 여행상품에 대하여 통신판매중개자로서 통신판매의 당사자가 아니며 해당상품의 거래정보 및 거래등에 대해 책임을 지지 않습니다.</p>
+            <span class="pc">COPYRIGHT &copy; YHTOUR SERVICE INC. ALL RIGHTS RESERVED.</span>
+            <span class="mob">&copy; YHTOUR CORPORATION.</span>
+            <div class="infocheck">
+                <a href="#">보증보험가입확인</a>
+                <a href="#">사업자정보확인</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+<!--script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>  
+  
+<script src="js/header.js"></script>
+<script src="js/index.js"></script>
+    
+</body>
+</html>
