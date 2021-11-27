@@ -1,0 +1,15 @@
+/* notosans */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+.notosanskr * { font-family: 'Noto Sans KR', sans-serif; }
+.nanumsquare { font-family: 'NanumSquare', sans-serif !important; }
+
+/* GmarketSansBold */
+@font-face {
+    font-family: 'GSB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {
+    font-family: 'GSM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {
+    font-family: 'GSL';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');font-weight: normal;font-style: normal;}
