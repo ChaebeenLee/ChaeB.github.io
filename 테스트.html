@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+
+<style>
+    
+* {margin:0; padding:0;}
+li {list-style:none;}
+body{height:1100px;}
+
+.wrap {
+	width:200px; 
+	margin:0 auto;
+	padding-top:50px;
+}
+.progress {
+	position:relative;
+	width:200px;
+	height:200px;
+    border-radius:50%;}
+.progress div {
+	position:absolute;
+	left:100px; 
+	top:0px;
+	display:none; 
+	width:2px;
+	height:100px;
+	background: red;
+	transform-origin: 0px 100px;}
+.progress_value {
+	transform:lotate(0deg);}
+.progress span {
+	position:absolute; left:2px; top:2px; z-index:10;
+	width:196px; background:#fcfcfc; border-radius:50%;
+	text-align:center; line-height:196px; 
+	font-size:24px; font-weight:bold; color:#666;}
+    
+</style>
+
+
+<body>
+  <div class="wrap">
+		<div class="progress" data-percent="85">
+		  <span></span>
+		</div>
+	</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'>
+</script>
+
+<script>
+(function(){
+	var doms = '';
+	var $m = $('.progress');
+	var $data = $m.find('span');
+	var data = $m.data('percent');
+	var com = Math.round(data / 100 * 360);
+	var dur = 1000;
+
+	var getVendorPrefix = function() {
+		var body = document.body || document.documentElement,
+			style = body.style,
+			transition = "Transition",
+			vendor = ["Moz", "Webkit", "ms"],
+			lastGage,
+			i = 0;
+		while (i < vendor.length) {
+			if (typeof style[vendor[i] + transition] === "string") {
+				return vendor[i];
+			}
+			i++;
+		}
+		return false;
+	};
+	var prefix = getVendorPrefix();
+	var transform = prefix + 'Transform';
+
+	for(var i=0; i <= com; i++){
+	 doms = '<div class="gage-bar"></div>';
+	 $m.append(doms);
+	 $('.gage-bar:last').css(transform, 'rotate(' + i + 'deg)');
+	}
+
+	//$m.append(doms);
+
+	$m.find('div').each(function(index, item){
+	  $(item).stop().delay(index * 5).fadeIn(50);
+	});
+
+	for(var j=0; j <= data; j++){
+		(function(index){
+		   var time = (360/100*index)*5;
+			  setTimeout(function(){
+				$data.text( index + '%');
+			  }, time);
+		})(j);
+	}
+})();
+    
+</script>
+</body>
+</html>
